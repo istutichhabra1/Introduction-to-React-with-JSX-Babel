@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual DOM vs Traditional DOM</title>
+</head>
+<body>
+  <h1>Virtual DOM vs Traditional DOM</h1>
+  <button id="change-title-vanilla">Change Title (Vanilla JS)</button>
+  <p>Vanilla JS DOM Updates: <span id="vanilla-updates">0</span></p>
+
+  <script>
+    let vanillaUpdates = 0;
+
+    document.getElementById('change-title-vanilla').addEventListener('click', function() {
+      document.title = "Title changed via Vanilla JS";
+      vanillaUpdates++;
+      document.getElementById('vanilla-updates').textContent = vanillaUpdates;
+    });
+  </script>
+</body>
+</html>
